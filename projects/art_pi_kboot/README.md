@@ -26,7 +26,7 @@ flash.
 
 ### note:  
 1, thanks to rt-thread's powerfull hardware, we can use  
-   2M uart baud. the first log you can get is 'BOOT'.  
+   2M uart baud. the first log you can get is 'ART-PI KBOOT'.  
 2, there is a bug in u-boot need to debug futher.(u-boot startup too slowly)  
 3, rootfs on spi flash failed, seems kernel/spi driver working failed.  
 4, currently art.itb is included with initramfs created from buildroot.  
