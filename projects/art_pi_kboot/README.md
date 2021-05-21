@@ -23,11 +23,11 @@ flash.
 
 ### note:  
 1, thanks to rt-thread's powerfull hardware, we can use  
-      2M uart baud. the first log you can get is 'BOOT'.  
-2,  there is a bug in u-boot need to debug futher.(u-boot startup too slowly)  
-3,  rootfs on spi flash failed, seems kernel/spi driver working failed.  
-4,  currently art.itb is included with initramfs created from buildroot.  
-5,  Art-Pi board had been accepted by u-boot/linux, you can get the code from  
+   2M uart baud. the first log you can get is 'BOOT'.  
+2, there is a bug in u-boot need to debug futher.(u-boot startup too slowly)  
+3, rootfs on spi flash failed, seems kernel/spi driver working failed.  
+4, currently art.itb is included with initramfs created from buildroot.  
+5, Art-Pi board had been accepted by u-boot/linux, you can get the code from  
 
 ### u-boot:  
 [U-BOOT  gitlab](https://source.denx.de/u-boot/u-boot/-/tree/master/board/st/stm32h750-art-pi) 
@@ -62,7 +62,7 @@ In:    serial@40004c00
 Out:   serial@40004c00  
 Err:   serial@40004c00  
 Hit SPACE in 3 seconds to stop autoboot.  
-` Loading kernel from FIT Image at 90080000 ...`  
+ Loading kernel from FIT Image at 90080000 ...  
    Using 'conf-1' configuration  
    Trying 'kernel' kernel subimage  
      Description:  Vanilla Linux kernel  
@@ -116,7 +116,7 @@ Starting kernel ...
 [    0.000000]   Normal zone: 62 pages used for memmap  
 [    0.000000]   Normal zone: 0 pages reserved  
 [    0.000000]   Normal zone: 7936 pages, LIFO batch:0  
-[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1\*32768  
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768  
 [    0.000000] pcpu-alloc: [0] 0  
 [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 7874  
 [    0.000000] Kernel command line: console=ttySTM0,2000000 root=/dev/ram loglevel=8  
@@ -129,28 +129,28 @@ Starting kernel ...
 [    0.000000] rcu:     RCU event tracing is enabled.  
 [    0.000000]  Trampoline variant of Tasks RCU enabled.  
 [    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.  
-[    0.000000] NR\_IRQS: 16, nr\_irqs: 16, preallocated irqs: 16  
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16  
 [    0.000000] /soc/interrupt-controller@58000000: bank0  
 [    0.000000] /soc/interrupt-controller@58000000: bank1  
 [    0.000000] /soc/interrupt-controller@58000000: bank2  
-[    0.000000] random: get\_random\_bytes called from start\_kernel+0x1e9/0x364 with crng\_init=0  
-[    0.000000] clocksource: arm\_system\_timer: mask: 0xffffff max\_cycles: 0xffffff, max\_idle\_ns: 29863442 ns  
+[    0.000000] random: get_random_bytes called from start_kernel+0x1e9/0x364 with crng_init=0  
+[    0.000000] clocksource: arm_system_timer: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 29863442 ns  
 [    0.000000] ARM System timer initialized as clocksource  
-[    0.000026] sched\_clock: 32 bits at 62MHz, resolution 16ns, wraps every 34359738360ns  
-[    0.000285] timer@40000c00: STM32 sched\_clock registered  
+[    0.000026] sched_clock: 32 bits at 62MHz, resolution 16ns, wraps every 34359738360ns  
+[    0.000285] timer@40000c00: STM32 sched_clock registered  
 [    0.000417] Switching to timer-based delay loop, resolution 16ns  
 [    0.000518] timer@40000c00: STM32 delay timer registered  
-[    0.000644] clocksource: timer@40000c00: mask: 0xffffffff max\_cycles: 0xffffffff, max\_idle\_ns: 30580167144 ns  
+[    0.000644] clocksource: timer@40000c00: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 30580167144 ns  
 [    0.000862] /soc/timer@40000c00: STM32 clockevent driver initialized (32 bits)  
 [    0.003320] Console: colour dummy device 80x30  
 [    0.003711] Calibrating delay loop (skipped), value calculated using timer frequency.. 125.00 BogoMIPS (lpj=625000)  
-[    0.003924] pid\_max: default: 4096 minimum: 301  
+[    0.003924] pid_max: default: 4096 minimum: 301  
 [    0.005077] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)  
 [    0.005378] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)  
 [    0.021073] rcu: Hierarchical SRCU implementation.  
 [    0.029063] devtmpfs: initialized  
 [    0.093875] DMA: default coherent area is set  
-[    0.094108] clocksource: jiffies: mask: 0xffffffff max\_cycles: 0xffffffff, max\_idle\_ns: 19112604462750000 ns  
+[    0.094108] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns  
 [    0.094465] pinctrl core: initialized pinctrl subsystem  
 [    0.104166] NET: Registered protocol family 16  
 [    0.207442] stm32h743-pinctrl soc:pin-controller: No package detected, use default one  
@@ -177,7 +177,7 @@ Starting kernel ...
 [    0.510753] Bluetooth: SCO socket layer initialized  
 [    0.514469] clocksource: Switched to clocksource timer@40000c00  
 [    0.648874] NET: Registered protocol family 2  
-[    0.656646] tcp\_listen\_portaddr\_hash hash table entries: 512 (order: 0, 4096 bytes, linear)  
+[    0.656646] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)  
 [    0.657110] TCP established hash table entries: 1024 (order: 0, 4096 bytes, linear)  
 [    0.657356] TCP bind hash table entries: 1024 (order: 0, 4096 bytes, linear)  
 [    0.657566] TCP: Hash tables configured (established 1024 bind 1024)  
@@ -186,26 +186,26 @@ Starting kernel ...
 [    0.661006] NET: Registered protocol family 1  
 [    2.554732] random: fast init done  
 [    4.733734] Initialise system trusted keyrings  
-[    4.736051] workingset: timestamp\_bits=30 max\_order=13 bucket\_order=0  
+[    4.736051] workingset: timestamp_bits=30 max_order=13 bucket_order=0  
 [    4.786790] jffs2: version 2.2. (NAND) ▒© 2001-2006 Red Hat, Inc.  
 [    5.310040] Key type asymmetric registered  
 [    5.310288] Asymmetric key parser 'x509' registered  
 [    5.310634] io scheduler mq-deadline registered  
 [    5.310796] io scheduler kyber registered  
 [    5.316971] STM32 USART driver initialized  
-[    5.321119] 40004800.serial: ttySTM1 at MMIO 0x40004800 (irq = 30, base\_baud = 3906250) is a stm32-usart  
-[    5.331415] 40004c00.serial: ttySTM0 at MMIO 0x40004c00 (irq = 31, base\_baud = 3906250) is a stm32-usart  
+[    5.321119] 40004800.serial: ttySTM1 at MMIO 0x40004800 (irq = 30, base_baud = 3906250) is a stm32-usart  
+[    5.331415] 40004c00.serial: ttySTM0 at MMIO 0x40004c00 (irq = 31, base_baud = 3906250) is a stm32-usart  
 [    5.401958] printk: console [ttySTM0] enabled  
 [    5.405786] stm32-usart 40004c00.serial: rx dma alloc failed  
 [    5.406520] stm32-usart 40004c00.serial: interrupt mode used for rx (no dma)  
 [    5.407322] stm32-usart 40004c00.serial: tx dma alloc failed  
 [    5.407948] stm32-usart 40004c00.serial: interrupt mode used for tx (no dma)  
-[    5.431340] spi\_stm32 40013000.spi: spurious IT (sr=0x00000002, ier=0x00000000)  
+[    5.431340] spi_stm32 40013000.spi: spurious IT (sr=0x00000002, ier=0x00000000)  
 [    6.445667] spi-nor spi0.0: w25q128 (16384 Kbytes)  
 [    6.446504] 1 fixed-partitions partitions found on MTD device spi0.0  
 [    6.447236] Creating 1 MTD partitions on "spi0.0":  
 [    6.447813] 0x000000000000-0x000001000000 : "root filesystem"  
-[    6.467611] spi\_stm32 40013000.spi: driver initialized  
+[    6.467611] spi_stm32 40013000.spi: driver initialized  
 [    6.473000] Broadcom 43xx driver loaded [ Features: NS ]  
 [    6.474298] Broadcom 43xx-legacy driver loaded [ Features: ID ]  
 [    6.480611] i2c /dev entries driver  
@@ -215,7 +215,7 @@ Starting kernel ...
 [   10.593288] mmci-pl18x 48022400.mmc: mmc1: PL180 manf 53 rev1 at 0x48022400 irq 51,0 (pio)  
 [   10.641770] ipip: IPv4 and MPLS over IPv4 tunneling driver  
 [   10.648950] gre: GRE over IPv4 demultiplexor driver  
-[   10.649572] ip\_gre: GRE over IPv4 tunneling driver  
+[   10.649572] ip_gre: GRE over IPv4 tunneling driver  
 [   10.672581] NET: Registered protocol family 10  
 [   10.688992] Segment Routing with IPv6  
 [   10.690162] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver  
@@ -253,7 +253,7 @@ gpiochip1   random      tty19       tty34       tty5        tty8
 gpiochip10  shm         tty2        tty35       tty50       tty9  
 gpiochip2   stderr      tty20       tty36       tty51       ttySTM0  
 gpiochip3   stdin       tty21       tty37       tty52       ttySTM1  
-gpiochip4   stdout      tty22       tty38       tty53       ubi\_ctrl  
+gpiochip4   stdout      tty22       tty38       tty53       ubi_ctrl  
 gpiochip5   tty         tty23       tty39       tty54       urandom  
 gpiochip6   tty0        tty24       tty4        tty55       vcs  
 gpiochip7   tty1        tty25       tty40       tty56       vcs1  
@@ -274,9 +274,9 @@ mtd0        tty14       tty3        tty45       tty60       zero
     8 root         0 IW<  [mm_percpu_wq]  
     9 root         0 SW   [rcu_tasks_kthre]  
    10 root         0 SW   [ksoftirqd/0]  
-   11 root         0 IW   [rcu\_preempt]  
+   11 root         0 IW   [rcu_preempt]  
    12 root         0 SW   [kdevtmpfs]  
-   13 root         0 IW<  [inet\_frag\_wq]  
+   13 root         0 IW<  [inet_frag_wq]  
    14 root         0 DW   [kworker/0:1+eve]  
    15 root         0 IW<  [writeback]  
    44 root         0 IW<  [kblockd]  
@@ -290,7 +290,7 @@ mtd0        tty14       tty3        tty45       tty60       zero
    53 root         0 DW   [kworker/0:2+eve]  
    54 root         0 SW   [irq/51-mmci-pl1]  
    55 root         0 IW   [kworker/0:3-eve]  
-   56 root         0 IW<  [ipv6\_addrconf]  
+   56 root         0 IW<  [ipv6_addrconf]  
    57 root         0 SW<  [krfcommd]  
    60 root         0 SW   [irq/31-40004c00]  
    79 root       440 S    -sh  
