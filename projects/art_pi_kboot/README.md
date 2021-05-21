@@ -20,6 +20,9 @@ flash.
 `boot kernel:`  
 `msh >boot`  
 
+### ./demo folder  
+- u-boot: load kernel to sdram, or jump to '0x90080000' do kernel xip  
+- art.itb: kernel zImage with dtb inside  
 
 ### note:  
 1, thanks to rt-thread's powerfull hardware, we can use  
