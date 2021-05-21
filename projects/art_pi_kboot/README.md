@@ -23,11 +23,11 @@ flash.
 
 ### note:  
 1, thanks to rt-thread's powerfull hardware, we can use  
-   2M uart baud. the first log you can get is 'RTT BOOT'.  
-2, there is a bug in u-boot need to debug futher.(u-boot startup too slowly)  
-3, rootfs on spi flash failed, seems kernel/spi driver working failed.  
-4, currently art.itb is included with initramfs created from buildroot.  
-5, Art-Pi board had been accepted by u-boot/linux, you can get the code from  
+      2M uart baud. the first log you can get is 'BOOT'.  
+2,  there is a bug in u-boot need to debug futher.(u-boot startup too slowly)  
+3,  rootfs on spi flash failed, seems kernel/spi driver working failed.  
+4,  currently art.itb is included with initramfs created from buildroot.  
+5,  Art-Pi board had been accepted by u-boot/linux, you can get the code from  
 
 ### u-boot:  
 [U-BOOT  gitlab](https://source.denx.de/u-boot/u-boot/-/tree/master/board/st/stm32h750-art-pi) 
